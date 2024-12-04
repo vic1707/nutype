@@ -14,7 +14,7 @@ pub fn gen_new_unchecked(
                 /// Creates a value of type skipping the sanitization and validation
                 /// rules. Generally, you should avoid using `::new_unchecked()` without a real need.
                 /// Use `::new()` instead when it's possible.
-                pub unsafe fn new_unchecked(inner_value: #inner_type) -> #type_name {
+                pub const unsafe fn new_unchecked(inner_value: #inner_type) -> #type_name {
                     #type_name(inner_value)
                 }
             }
